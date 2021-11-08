@@ -271,7 +271,7 @@ with modelPrediction_cont:
     df_input_ppc = input_preprocess()
 
     # load Stack model
-    with open("Stack Model.pkcls","rb") as model:
+    with open("StackModel.pkcls","rb") as model:
         loaded_model = pickle.load(model)
     
     # make prediction:
