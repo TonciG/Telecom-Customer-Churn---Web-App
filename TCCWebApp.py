@@ -285,8 +285,8 @@ with modelPrediction_cont:
         st.markdown("### Prediction Probabilities")
         st.markdown("Given the user input on the left, the "
                 "probability this customer will churn, i.e. not churn, is:")
-        st.write("churn(no): ", round(probs[0]*100,1), "%")
-        st.write("churn(yes): ", round(probs[1]*100,1), "%")
+        st.write("churn (no): ", round(probs[0]*100,1), "%")
+        st.write("churn (yes): ", round(probs[1]*100,1), "%")
 
         st.markdown("### Prediction")
 
