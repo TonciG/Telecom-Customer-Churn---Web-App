@@ -125,7 +125,7 @@ df_userinput = get_user_input()
     
 with header_cont:
     st.markdown("# Telecom Customer Churn")
-    st.markdown("This is a web app for an ML model built in [Orange Data Mining software] (https://orangedatamining.com/), which allows "
+    st.markdown("This is a web app for an ML model trained and tested in [Orange Data Mining software] (https://orangedatamining.com/), which allows "
             "predicting customer churn in telecom industry.")
 
 
