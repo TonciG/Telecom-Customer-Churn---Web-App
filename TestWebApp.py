@@ -1,4 +1,3 @@
-
 import streamlit as st
 import Orange
 import pickle
@@ -32,7 +31,7 @@ modelPrediction_cont = st.container()
 
 
 # StackModel contains Pre-processing pipeline (made on the training dataset)
-# + Model (with its parameters & hypeparameters)
+# + Model (with its parameters & hyperparameters)
 with open("StackModel.pkcls","rb") as model:
     loaded_model = pickle.load(model)
 
@@ -112,9 +111,9 @@ def get_user_input():
                    ttlintlmnts_val,ttlintlcalls_val,numcustcalls_val]])
 
     # in this format, the data is now ready to be fed to StackModel
-    data_input = Orange.data.Table(domain, X)
+    user_input = Orange.data.Table(domain, X)
 
-    return data_input
+    return user_input
 
 
 df_userinput = get_user_input()
@@ -140,8 +139,7 @@ with dataset_cont:
              "The last column is the target denoting whether the customer unsubscribed from the service (churn = yes) or not (churn = no).")
     df = get_data()
     df = df.drop("Unnamed: 0", axis=1)
-
-    # the following works the same as st.write(df)
+    
     st.dataframe(df)
 
 
@@ -151,8 +149,6 @@ with dataset_cont:
     
 with features_cont:
     st.markdown("## Features")
-    df = get_data()
-    features = np.array(df.columns)
     st.markdown("There are 19 input features in this dataset: ")
     st.markdown("(1) state, (2) account_length, (3) area_code, (4) international_plan, (5) voice_mail_plan, "
                 "(6) number_vmail_messages, (7) total_day_minutes, (8) total_day_calls, (9) total_day_charge, "
