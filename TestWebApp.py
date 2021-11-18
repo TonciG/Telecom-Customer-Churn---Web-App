@@ -125,8 +125,8 @@ df_userinput = get_user_input()
     
 with header_cont:
     st.markdown("# Telecom Customer Churn")
-    st.markdown("This is a web app for an ML model trained and tested in [Orange Data Mining software] (https://orangedatamining.com/). The model allows "
-            "predicting customer churn in telecom industry.")
+    st.markdown("This is a web app for a Machine Learning (ML) model trained and tested in [Orange Data Mining software] (https://orangedatamining.com/). The model "
+            "predicts customer churn in telecom industry.")
 
 
 
@@ -158,14 +158,14 @@ with features_cont:
     
     st.markdown("However, after training the ML model only the following 10 features were identified as "
                 "relevant for making predictions:")
-    st.markdown("(1) **state** - the home US state of the customer")
+    st.markdown("(1) **state** - the US home state of the customer")
     st.markdown("(2) **international_plan** - indicates whether the customer has international plan or not")
     st.markdown("(3) **voice_mail_plan** - indicates whether the customer has voice mail plan or not")
     st.markdown("(4) **number_vmail_messages** - number of voice mail messages made by the customer")
     st.markdown("(5) **total_day_minutes** - total number of minutes made by the customer during day")
     st.markdown("(6) **total_eve_minutes** - total number of minutes made by the customer during evening")
     st.markdown("(7) **total_night_minutes** - total number of minutes made by the customer during night")
-    st.markdown("(8) **total_intl_minutes** - total number of minutes made by the customer on international")
+    st.markdown("(8) **total_intl_minutes** - total number of minutes made by the customer on international calls")
     st.markdown("(9) **total_intl_calls** - total number of international calls made by the customer")
     st.markdown("(10) **number_customer_service_calls** - number of calls to the customer service team made")
 
@@ -177,9 +177,9 @@ with features_cont:
     
 with modelPrediction_cont:
     st.markdown("## Model Prediction")
-    st.markdown("The final ML model is a Stack consisting of Gradient Boosting and Random Forest "
+    st.markdown("The ML model is a Stack consisting of Gradient Boosting and Random Forest "
             "classifiers with a Logistic Regression acting as an aggregate. To make a prediction "
-            "with the model, you first need to select values for the 10 features by using the "
+            "with the model, you need to select values for the 10 features by using the "
             "options and sliders in the sidebar on the left.")
 
     left_col, right_col = st.columns(2)
@@ -195,7 +195,7 @@ with modelPrediction_cont:
         st.write("total night minutes:  ", df_userinput[0,6])
         st.write("total intl minutes:  ", df_userinput[0,7])
         st.write("total intl calls:  ", df_userinput[0,8])
-        st.write("num cust service calls:  ", df_userinput[0,9])
+        st.write("num. cust. service calls:  ", df_userinput[0,9])
 
     
     probs = loaded_model(df_userinput[0], 1)
