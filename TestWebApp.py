@@ -195,7 +195,7 @@ with modelPrediction_cont:
         st.write("total night minutes:  ", df_userinput[0,6])
         st.write("total intl minutes:  ", df_userinput[0,7])
         st.write("total intl calls:  ", df_userinput[0,8])
-        st.write("num. cust. service calls:  ", df_userinput[0,9])
+        st.write("number customer service calls:  ", df_userinput[0,9])
 
     
     probs = loaded_model(df_userinput[0], 1)
