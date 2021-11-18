@@ -125,7 +125,7 @@ df_userinput = get_user_input()
     
 with header_cont:
     st.markdown("# Telecom Customer Churn")
-    st.markdown("This is a web app for an ML model trained and tested in [Orange Data Mining software] (https://orangedatamining.com/), which allows "
+    st.markdown("This is a web app for an ML model trained and tested in [Orange Data Mining software] (https://orangedatamining.com/). The model allows "
             "predicting customer churn in telecom industry.")
 
 
@@ -136,7 +136,7 @@ with header_cont:
 with dataset_cont:
     st.markdown("## Dataset")
     st.markdown("The ML model was trained on the dataset below (adopted from [Applied Predictive Modeling](https://link.springer.com/book/10.1007/978-1-4614-6849-3)). "
-             "The last column is the target denoting whether the customer unsubscribed from the service (churn = yes) or not (churn = no).")
+             "The last column (churn) is the target showing whether the customer unsubscribed from the service (yes) or not (no).")
     df = get_data()
     df = df.drop("Unnamed: 0", axis=1)
     
@@ -158,24 +158,16 @@ with features_cont:
     
     st.markdown("However, after training the ML model only the following 10 features were identified as "
                 "relevant for making predictions:")
-    st.markdown("(1) **state** - the home US state of the customer (categorical feature with 51 values)")
-    st.markdown("(2) **international_plan** - indicates whether the customer has international plan or not "
-                "(categorical feature with 2 values)")
-    st.markdown("(3) **voice_mail_plan** - indicates whether the customer has voice mail plan or not "
-                "(categorical feature with 2 values)")
-    st.markdown("(4) **number_vmail_messages** - number of voice mail messages made by the customer "
-                "(numeric feature)")
-    st.markdown("(5) **total_day_minutes** - total number of minutes made by the customer during day "
-                "(numeric feature)")
-    st.markdown("(6) **total_eve_minutes** - total number of minutes made by the customer during evening "
-                "(numeric feature)")
-    st.markdown("(7) **total_night_minutes** - total number of minutes made by the customer during night "
-                "(numeric feature)")
-    st.markdown("(8) **total_intl_minutes** - total number of minutes made by the customer on international "
-                "calls (numeric feature)")
-    st.markdown("(9) **total_intl_calls** - total number of international calls made by the customer (numeric feature)")
-    st.markdown("(10) **number_customer_service_calls** - number of calls to the customer service team made "
-                "by the customer (numeric feature)")
+    st.markdown("(1) **state** - the home US state of the customer")
+    st.markdown("(2) **international_plan** - indicates whether the customer has international plan or not")
+    st.markdown("(3) **voice_mail_plan** - indicates whether the customer has voice mail plan or not")
+    st.markdown("(4) **number_vmail_messages** - number of voice mail messages made by the customer")
+    st.markdown("(5) **total_day_minutes** - total number of minutes made by the customer during day")
+    st.markdown("(6) **total_eve_minutes** - total number of minutes made by the customer during evening")
+    st.markdown("(7) **total_night_minutes** - total number of minutes made by the customer during night")
+    st.markdown("(8) **total_intl_minutes** - total number of minutes made by the customer on international")
+    st.markdown("(9) **total_intl_calls** - total number of international calls made by the customer")
+    st.markdown("(10) **number_customer_service_calls** - number of calls to the customer service team made")
 
 
 
